@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void imprimeVetorPont(int *vetor, int tamanho){
+	int i;
+	for (i = 0; i < tamanho; i++){
+		printf("%d\n", vetor[i]);
+	}
+	printf("\n");
+}
+
+int main(void) {
+	
+	int vetor[] = {1, 2, 3, 4, 5};
+	int tamanho = sizeof(vetor) / sizeof(vetor[0]);
+	
+	imprimeVetorPont(vetor,tamanho);
+	
+
+	
+	return 0;
+}
