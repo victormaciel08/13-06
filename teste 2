@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void imprimeVetorPont(int *vetor, int tamanho){
+	int i;
+	for (i = 0; i < tamanho; i++){
+		printf("%d\n", vetor[i]);
+	}
+	printf("\n");
+}
+
+void imprimeVetorArray(int vetor[], int tamanho){
+	int i;
+	for (i = 0; i < tamanho; i++){
+		printf("%d\n", vetor[i]);
+	}
+	printf("\n");
+}
+
+int main(void) {
+	
+	int tam;
+	int i;
+	
+	printf("Digite o tamanho do vetor: ");
+	scanf(" %d", &tam);
+	
+	int *vetor = malloc(tam * sizeof(int));
+		
+	for(i = 0; i < tam; i++){
+		vetor[i] = i + 1;
+	}
+	
+	imprimeVetorPont(vetor, tam);
+	imprimeVetorArray(vetor, tam);
+	
+	return 0;
+}
